@@ -1,12 +1,13 @@
 const express=require('express')
-const { markAttendance, getAttendance } = require('../controller/attandanceController')
+const {getAttendance, punchinAttendance, punchoutAttendance } = require('../controller/attandanceController')
 const { isLoggedIn } = require('../middleware/employeMiddleware')
 const router=express.Router()
 
 
 
 
-router.route('/markattendance').post(isLoggedIn,markAttendance)
+router.route('/punchinattendance').post(isLoggedIn,punchinAttendance)
+router.route('/punchoutattendance').post(isLoggedIn,punchoutAttendance)
 router.route('/attendancedetail/:id').get(isLoggedIn,getAttendance)
 
 module.exports=router

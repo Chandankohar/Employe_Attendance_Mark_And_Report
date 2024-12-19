@@ -23,7 +23,7 @@ const LoginPage = () => {
         { email, password }
       );
 
-      if (response.data.success) {
+      if (response.data?.success) {
         localStorage.setItem("employeToken", response.data.token);
         const valueToStore =
           typeof response.data.employee !== "string"
@@ -33,10 +33,10 @@ const LoginPage = () => {
         setRedirect(true);
         toast.success("Login Successful");
       } else {
-        toast.error(response.data.message);
+        toast.error(response?.data.message);
       }
     } catch (err) {
-      toast.error(err.response.data.message);
+      toast.error(err.response.data?.message);
     }
   };
   if (redirect) {

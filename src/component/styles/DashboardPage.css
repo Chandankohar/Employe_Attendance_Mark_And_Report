@@ -106,7 +106,7 @@ header {
   background: rgba(242, 243, 239, 0.404);
 }
 
-button.mark-present {
+button.mark-in {
   background: #02ff63e3;
   margin-bottom: 10px;
   font-weight: bold;
@@ -118,7 +118,24 @@ button.mark-present {
   transition: background 0.3s;
 }
 
-button.mark-present:hover {
+button.mark-in:hover {
+  background: #0319e2;
+  color: whitesmoke;
+}
+
+button.mark-out {
+  background: #ff0202c9;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button.mark-out:hover {
   background: #0319e2;
   color: whitesmoke;
 }
@@ -179,4 +196,22 @@ color: #000000f8;
 .refresh-attendance:hover {
   background: rgb(228, 252, 14);
   color:  #fa2f5be3;
+}
+.button-control{
+  display: flex;
+  
+  
+}
+.vertical {
+  border-left: 2px solid black;
+  height: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.notice{
+  color: rgb(202, 0, 0);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-style: italic;
 }

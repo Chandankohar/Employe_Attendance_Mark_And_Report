@@ -25,15 +25,11 @@ LATITUDE=******\
 RANGE=0.001  //IT INDICATE 1 METER RANGE\
 WIFI_SSID='YOUR WIFI SSID'\
 PORT=4000\
-WIFI_MODE='YOUR WIFI MODE'  // you get your wifi mode after npm install and run the following code by creating any file like abc.js and put the given code into this file and run by: node abc.js:\
+WIFI_MODE='YOUR WIFI MODE'  // you get your wifi mode after npm install and run  by: node server/checkmode.js:
 
-const wifi = require("node-wifi");\
 
-wifi.init({ iface: null });\
-const currentConnections = await wifi.getCurrentConnections();\
-console.log(currentConnections)\
 
-you can gate WIFI_MODE in console
+### `npm install`
 
 ### `npm start`
 Runs the backend

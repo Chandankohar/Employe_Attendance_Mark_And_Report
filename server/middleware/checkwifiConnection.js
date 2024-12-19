@@ -5,11 +5,10 @@ wifi.init({ iface: null });
 exports.checkWiFiConnection = async (req, res, next) => {
   try {
     const currentConnections = await wifi.getCurrentConnections();
-
+console.log(currentConnections)
     if (
       currentConnections.length === 0 ||
-      currentConnections[0].bssid !== ALLOWED_SSID ||
-      currentConnections[0].mode !== ALLOWED_MODE
+      currentConnections[0].bssid !== ALLOWED_SSID || currentConnections[0].mode !==ALLOWED_MODE
     ) {
       // return res.send(currentConnections[0].ssid)
       return res
